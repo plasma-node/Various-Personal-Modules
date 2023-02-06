@@ -9,9 +9,7 @@
 
 	@class OctreeRegionUtils
 ]=]
-local Import = require(game.ReplicatedStorage.Importer);
-
-local Draw = Import "Draw.u"
+local Draw = require(script.Parent.Draw)
 
 local EPSILON = 1e-6
 local SQRT_3_OVER_2 = math.sqrt(3)/2
