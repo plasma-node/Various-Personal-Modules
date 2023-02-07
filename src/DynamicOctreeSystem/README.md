@@ -6,7 +6,7 @@ This module relies on [Quenty's Octree module](https://quenty.github.io/Nevermor
 ## Documentation
 
 **Creating a grid:**    
-Calling DOS.New returns a "Grid".
+Calling `DOS.New` returns a "Grid".
 
 It's structure is:
 
