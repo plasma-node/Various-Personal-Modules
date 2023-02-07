@@ -1,6 +1,6 @@
 # DISCLAIMER
 
-This is a casual repository of some modules that I have either made or modified for my own use, that I have decided to make public. 
+This is a casual repository of some modules that I have either made or modified for my own use, that I have decided to make public.     
 **These modules may or may not be useful to you**.
 
 I do not enforce any styling guide other than what I use for my own personal style.   
