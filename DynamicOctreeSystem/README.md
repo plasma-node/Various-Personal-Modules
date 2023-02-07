@@ -1,6 +1,8 @@
 # Dynamic Octree System
 This module relies on [Quenty's Octree module](https://quenty.github.io/NevermoreEngine/api/Octree/) (included here) and allows you to easily track and update moving objects in an Octree.
 
+[Disclaimer](https://github.com/plasma-node/RandomPublicModules/blob/master/DISCLAIMER.md)
+
 ## Documentation
 
 **Creating a grid:**    
