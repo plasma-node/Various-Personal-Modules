@@ -74,19 +74,25 @@ local DOS = require(pathToDOSModule);
 local Grid = DOS.New("Players", 4, 100);
 
 game.Players.PlayerAdded:Connect(function (Player)
-    local tracker;
-    
-    Player.CharacterAdded:Connect(function (Character)
-        tracker = Grid:Track(Character, 0.1); -- Remember that using Grid:Track is not ideal for a large amount of objects. Better in this case to make a big loop to update for all players, or update only when movement events are fired.
-    end);
-    
-    Player.CharacterRemoving:Connect(function (Character)
-        if (tracker) then
-            tracker:Destroy();
-        end
-    end);
+	local tracker;
+
+	Player.CharacterAdded:Connect(function (Character)
+		tracker = Grid:Track(Character.HumanoidRootPart, 0.1); -- Remember that using Grid:Track is not ideal for a large amount of objects. Better in this case to make a big loop to update for all players, or update only when movement events are fired.
+	end);
+
+	Player.CharacterRemoving:Connect(function (Character)
+		if (tracker) then
+			tracker:Destroy();
+		end
+	end);
 end);
 
 
+while true do
+	task.wait(1);
+	
+	local nearby = Grid:RadiusSearch(Vector3.zero, 50);
+	print("Nearby entities: ", nearby)
+end
 
 ```
