@@ -42,3 +42,4 @@ DEV.New("walkmode", "Walk Mode", "default", 0, false, "C");
 DEV.Color("walkmode", DEV.Colors.Blue);
 ```
 
+![Example](https://gcdnb.pbrd.co/images/fc3WadMmn3HG.png?o=1)
