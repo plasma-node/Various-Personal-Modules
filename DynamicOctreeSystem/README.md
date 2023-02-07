@@ -48,6 +48,17 @@ local tracked = Grid:Track(SomeInstance, 0.1); -- Instance, Update Frequency (De
 
 You can destroy the entry by calling ``tracked:Destroy();``
 
+**Searching:**    
+For full documentation on Octree system, see [here](https://quenty.github.io/NevermoreEngine/api/Octree/). You can access the Octree with ``Grid.Tree``.
+
+```lua
+Grid:RadiusSearch(Position, Radius);
+```
+
+```lua
+Grid:GetAllNodes();
+```
+
 **Cleanup:**   
 ```lua
 Grid:Destroy();
