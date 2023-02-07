@@ -69,7 +69,7 @@ Grid:Destroy();
 ## Example Usage
 
 ```lua
-local DOS = require("DynamicOctreeSystem");
+local DOS = require(pathToDOSModule);
 
 local Grid = DOS.New("Players", 4, 100);
 
