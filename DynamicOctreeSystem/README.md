@@ -3,6 +3,20 @@ This module relies on [Quenty's Octree module](https://quenty.github.io/Nevermor
 
 ## Documentation
 
+**Creating a grid:**    
+Calling DOS.New returns a "Grid".
+
+It's structure is:
+
+```
+Name = string
+Tree = Octree
+Update = boolean (Enables/disables tracked entry updates)
+Entires = table
+Tracked = table
+```
+
+
 ```lua
 local Grid = DOS.New("Name", 4, 512); -- Name, Depth (default 4), Size (default 512)
 ```
@@ -37,4 +51,29 @@ You can destroy the entry by calling ``tracked:Destroy();``
 **Cleanup:**   
 ```lua
 Grid:Destroy();
+```
+
+## Example Usage
+
+```lua
+local DOS = require("DynamicOctreeSystem");
+
+local Grid = DOS.New("Players", 4, 100);
+
+game.Players.PlayerAdded:Connect(function (Player)
+    local tracker;
+    
+    Player.CharacterAdded:Connect(function (Character)
+        tracker = Grid:Track(Character, 0.1); -- Remember that using Grid:Track is not ideal for a large amount of objects. Better in this case to make a big loop to update for all players, or update only when movement events are fired.
+    end);
+    
+    Player.CharacterRemoving:Connect(function (Character)
+        if (tracker) then
+            tracker:Destroy();
+        end
+    end);
+end);
+
+
+
 ```
