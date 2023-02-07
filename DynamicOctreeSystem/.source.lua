@@ -19,6 +19,14 @@ local OCTREE_DEFAULTS = {
 local Grid = {};
 Grid.__index = Grid;
 
+function Grid:GetALlNodes ()
+    return self.Tree:GetALlNodes();
+end
+
+function Grid:RadiusSearch (Position, Radius)
+    return self.Tree:RadiusSearch(Position, Radius);
+end
+
 -- Used to add items which will not
 -- be destroyed or moved within the lifespan
 -- of the DOS grid
