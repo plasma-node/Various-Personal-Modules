@@ -31,7 +31,7 @@ local Player = game.Players.LocalPlayer;
 
 -- WARNING: YOU MUST DOWNLOAD THE DEVSTATUSPANELGUI RESOURCE FROM RELEASES!!
 local Gui = Player.PlayerGui:WaitForChild("DevStatusPanel", 1);
----------------------------------------------------------------------------
+----------------------------------------------------------------------------
 
 module.Settings = {
 	CreateNilEntries = false; -- Automatically create an entry if we search for it and it does not exist
