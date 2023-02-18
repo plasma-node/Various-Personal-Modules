@@ -1,6 +1,6 @@
-# RandomPublicModules
+# Various Personal Modules
 
-Here are some random modules I have made or modified (some will have external dependencies which are included)
+Here are some random modules I have made or modified (some will have external dependencies which are included). This is not complete and will be periodically expanded.
 
 ## [DISCLAIMER](https://github.com/plasma-node/RandomPublicModules/blob/master/DISCLAIMER.md)
 
